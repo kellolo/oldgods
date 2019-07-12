@@ -1,6 +1,9 @@
 <template>
-  <div class="container">
+  <div class="container wrapper">
     <div>
+      <div id="background">
+        <video src="../static/src/video/background_1.mp4" autoplay muted loop></video>
+      </div>
       <logo />
       <h1 class="title">
         oldgods
@@ -39,9 +42,24 @@ export default {
 </script>
 
 <style>
-.container {
+#background {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -9999;
+    }
+    #background video {
+          width: 105vw;
+          overflow-Y: hidden;
+    }
+.wrapper {
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 100vh!important;
+  min-width: 100vw!important;
   display: flex;
   justify-content: center;
   align-items: center;
